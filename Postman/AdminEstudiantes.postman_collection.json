@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "a34fcbda-11c9-40ec-9cdc-979c9dfc6ed3",
+		"name": "AdminEstudiantes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39398934"
+	},
+	"item": [
+		{
+			"name": "Listar todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/AdminEstudiantesWs/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"AdminEstudiantesWs",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dar de alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"nombre\": \"Juan Pérez\",\r\n        \"curp\": \"JUPE920101HDFRRL09\",\r\n        \"matricula\": \"MAT2024001\",\r\n        \"fechaNacimiento\": \"2000-05-15\",\r\n        \"licenciatura\": \"Ingeniería en Sistemas\",\r\n        \"eliminado\": false\r\n    },\r\n    {\r\n        \"nombre\": \"María Gómez\",\r\n        \"curp\": \"MAGO910324MDFRRL08\",\r\n        \"matricula\": \"MAT2024002\",\r\n        \"fechaNacimiento\": \"1995-08-10\",\r\n        \"licenciatura\": \"Administración de Empresas\",\r\n        \"eliminado\": false\r\n    },\r\n    {\r\n        \"nombre\": \"Carlos Ramírez\",\r\n        \"curp\": \"CARA060712HDFRRL07\",\r\n        \"matricula\": \"MAT2024003\",\r\n        \"fechaNacimiento\": \"2006-07-12\",\r\n        \"licenciatura\": \"Derecho\",\r\n        \"eliminado\": false\r\n    },\r\n    {\r\n        \"nombre\": \"Ana López\",\r\n        \"curp\": \"ANLO080923MDFRRL06\",\r\n        \"matricula\": \"MAT2024004\",\r\n        \"fechaNacimiento\": \"2008-09-23\",\r\n        \"licenciatura\": \"Medicina\",\r\n        \"eliminado\": false\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/AdminEstudiantesWs/guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"AdminEstudiantesWs",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Juan Pérez Actualizado\",\r\n        \"curp\": \"JUPE920101HDFRRL09\",\r\n        \"matricula\": \"MAT2024001\",\r\n        \"licenciatura\": \"Ingeniería en Sistemas\",\r\n        \"fechaNacimiento\": \"2000-05-14\",\r\n        \"estadoProcedencia\": \"Ciudad de México\",\r\n        \"eliminado\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/AdminEstudiantesWs/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"AdminEstudiantesWs",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/AdminEstudiantesWs/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"AdminEstudiantesWs",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar By Nombre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"María Gómez\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/AdminEstudiantesWs/nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"AdminEstudiantesWs",
+						"nombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar By Matricula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"matricula\": \"MAT2024002\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/AdminEstudiantesWs/matricula",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"AdminEstudiantesWs",
+						"matricula"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar By Licenciatura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"licenciatura\": \"Derecho\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/AdminEstudiantesWs/licenciatura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"AdminEstudiantesWs",
+						"licenciatura"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
