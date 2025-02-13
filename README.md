@@ -1,4 +1,4 @@
-# Administración de Estudiantes (Student Administration)
+# Administración de Estudiantes
 
 Este proyecto es un sistema de administración de estudiantes desarrollado con Spring Boot que proporciona operaciones CRUD y búsquedas específicas a través de endpoints REST.
 
